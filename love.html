@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fdfdfd; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .bg-gradient { background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%); }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="pb-10">
+
+    <div class="p-6 sticky top-0 bg-white/80 backdrop-blur-lg z-50 flex items-center justify-between">
+        <a href="index.html" class="text-pink-500 font-bold flex items-center gap-2">
+            <i class="fas fa-arrow-left"></i> KEMBALI
+        </a>
+        <h1 class="font-black text-gray-800 tracking-tighter">MY LOVE</h1>
+        <div class="w-10"></div>
+    </div>
+
+    <div class="p-6 space-y-8">
+        
+        <div class="bg-gradient p-8 rounded-[40px] text-white shadow-xl shadow-pink-200 text-center floating">
+            <p class="text-[10px] font-bold uppercase tracking-[3px] mb-2 opacity-80">Kita udah jadian selama</p>
+            <h2 id="timer" class="text-4xl font-black tracking-tighter">0 Hari</h2>
+            <p class="text-[11px] mt-2 opacity-90 font-medium">Sejak kita resmi berpacaran ❤️</p>
+        </div>
+        
+
+        <div class="bg-gray-900 p-8 rounded-[40px] text-white relative overflow-hidden shadow-2xl">
+            <i class="fas fa-heart absolute -right-4 -bottom-4 text-8xl text-pink-500/10"></i>
+            <p class="text-[10px] font-bold text-pink-500 uppercase tracking-widest mb-3">Pesan Untuk Septi:</p>
+            <p id="pesan-teks" class="text-lg font-medium leading-relaxed italic">"Muat ulang untuk melihat pesan manis..."</p>
+            <button onclick="tampilkanPesan()" class="mt-4 text-[10px] bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-all">
+                GANTI PESAN <i class="fas fa-sync-alt ml-1"></i>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="flex items-center justify-between px-2">
+                <h3 class="font-extrabold text-xl text-gray-800">Our Dreams ✨</h3>
+                <span class="text-[10px] bg-pink-100 text-pink-600 px-3 py-1 rounded-full font-bold">WISH LIST</span>
+            </div>
+
+            <div class="space-y-3">
+                <div class="flex items-center gap-4 bg-white p-5 rounded-[25px] border border-gray-100 shadow-sm">
+                    <input type="checkbox" class="w-6 h-6 accent-pink-500 border-none bg-gray-100 rounded-lg">
+                    <span class="text-sm font-bold text-gray-700">Kerja Di jepang</span>
+                </div>
+                <div class="flex items-center gap-4 bg-white p-5 rounded-[25px] border border-gray-100 shadow-sm">
+                    <input type="checkbox" class="w-6 h-6 accent-pink-500 border-none bg-gray-100 rounded-lg">
+                    <span class="text-sm font-bold text-gray-700">Punya rumah mewah</span>
+                </div>
+                <div class="flex items-center gap-4 bg-white p-5 rounded-[25px] border border-gray-100 shadow-sm">
+                    <input type="checkbox" class="w-6 h-6 accent-pink-500 border-none bg-gray-100 rounded-lg">
+                    <span class="text-sm font-bold text-gray-700">Sukses</span>
+                </div>
+                <div class="flex items-center gap-4 bg-white p-5 rounded-[25px] border border-gray-100 shadow-sm">
+                    <input type="checkbox" class="w-6 h-6 accent-pink-500 border-none bg-gray-100 rounded-lg">
+                    <span class="text-sm font-bold text-gray-700">Punya keluarga harmonis</span>
+                </div>
+                <div class="mt-8 px-4 text-center">
+    <div class="inline-block p-1 bg-pink-100 rounded-full mb-3">
+        <i class="fas fa-sparkles text-pink-500 text-xs px-2"></i>
+    </div>
+    
+    <p class="text-gray-600 text-sm italic leading-relaxed">
+        "Nggak apa-apa bermimpi dulu sekarang, <br> 
+        siapa tahu nanti pelan-pelan jadi <span class="font-bold text-pink-500 underline decoration-pink-200">kenyataan</span> bareng kamu."
+    </p>
+    
+    <div class="mt-4 flex justify-center gap-1 opacity-30">
+        <div class="h-1 w-1 bg-pink-500 rounded-full"></div>
+        <div class="h-1 w-4 bg-pink-500 rounded-full"></div>
+        <div class="h-1 w-1 bg-pink-500 rounded-full"></div>
+    </div>
+    <div class="mt-10">
+    <h3 class="font-extrabold text-xl text-gray-800 mb-4 px-2">Our Moments 📸</h3>
+    <div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+        <div class="min-w-[150px] bg-white p-2 pb-6 shadow-md rotate-[-3deg] border border-gray-100">
+            <img src="foto2.jpg" class="w-full aspect-square object-cover mb-2" alt="Foto">
+            <p class="text-[10px] text-gray-500 text-center font-medium">kesayangan ku❤️</p>
+        </div>
+        <div class="min-w-[150px] bg-white p-2 pb-6 shadow-md rotate-[3deg] border border-gray-100">
+            <img src="foto1.jpg" class="w-full aspect-square object-cover mb-2" alt="Foto">
+            <p class="text-[10px] text-gray-500 text-center font-medium">Lucu Banget!</p>
+        </div>
+        
+</div>
+<div class="mt-10 px-2">
+    <h3 class="font-extrabold text-xl text-gray-800 mb-4">Pesan Rahasia 💌</h3>
+    <div onclick="this.querySelector('.pesan-isi').classList.toggle('hidden')" class="bg-gradient-to-r from-pink-400 to-rose-400 p-6 rounded-[30px] shadow-lg cursor-pointer transform active:scale-95 transition-all">
+        <div class="flex items-center gap-4 text-white">
+            <i class="fas fa-envelope-open-text text-3xl"></i>
+            <div>
+                <p class="text-xs font-bold opacity-80 uppercase">Tap untuk buka</p>
+                <p class="font-bold">Ada pesan buat kamu...</p>
+            </div>
+        </div>
+        <div class="pesan-isi hidden mt-4 pt-4 border-t border-white/20 text-white text-sm italic leading-relaxed">
+            "Makasih ya udah jadi bagian dari hari-hariku. Maaf kalau aku kadang nyebelin, tapi sayangku ke kamu nggak pernah kurang sedikitpun. Stay with me? ❤️"
+        </div>
+    </div>
+</div>
+<div class="mt-10 px-2 text-center">
+    <div id="hug-container" class="hidden fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div class="bg-white p-6 rounded-[40px] text-center animate-bounce-short">
+            <img src="peluk.gif" 
+                 alt="Hug GIF" class="w-40 h-40 mx-auto rounded-2xl mb-4">
+            <p class="font-black text-pink-500 text-lg">PELUKAN TERKIRIM! 🫂</p>
+            <p class="text-[10px] text-gray-400 mt-2">Klik di mana saja untuk tutup</p>
+        </div>
+    </div>
+
+    <button onclick="tampilkanPeluk()" class="w-full bg-white border-2 border-pink-200 p-5 rounded-[30px] shadow-lg shadow-pink-100 flex items-center justify-center gap-3 active:scale-95 transition-all">
+        <span class="text-2xl">🫂</span>
+        <div class="text-left">
+            <p class="text-[10px] font-bold text-pink-400 uppercase tracking-widest">Lagi kangen?</p>
+            <p class="text-sm font-black text-gray-800">KIRIM PELUK VIRTUAL</p>
+        </div>
+    </button>
+</div>
+<div class="mt-12 px-2">
+    <div class="bg-gray-900 p-8 rounded-[40px] text-center text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-rose-500"></div>
+        <p class="text-[10px] tracking-[3px] font-bold text-pink-500 mb-2 uppercase">Menuju</p>
+        <h3 class="text-3xl font-black mb-1">Ending</h3>
+        <p class="text-[11px] opacity-60 italic">"Makasih udah mau berkunjung tapi ini belum habis."</p>
+    </div>
+</div>
+<div class="mt-10 px-6 pb-20">
+    <div class="bg-white border-4 border-double border-pink-200 p-8 text-center rounded-lg shadow-2xl relative">
+        <div class="absolute -top-4 -left-4 text-4xl">👑</div>
+        <p class="text-[10px] font-serif text-gray-400 uppercase tracking-widest">Certificate of Appreciation</p>
+        <h2 class="font-serif text-2xl font-bold text-gray-800 my-4 italic">Septi Sayang</h2>
+        <p class="text-[10px] text-gray-500 leading-relaxed">
+            HARI INI DI CIANJUR  ,TANGGAL 18 AGUSTUS 2025. AGUNG DAN SEPTI DENGAN PENUH PERASAAN TELAH RESMI BERPACARAN. HAL-HAL MENGENAI PENYEMPURNAAN DAN KEMESRAAN AKAN DISELENGGARAKAN DALAM TEMPO YANG SELAMA-LAMANYA.
+        </p>
+        <div class="mt-6 pt-4 border-t border-gray-100 flex justify-between items-center text-[8px] font-bold text-gray-400">
+            <span>TERTANDA: 
+            AGUNG DAN SEPTI</span>
+            <span>STAMP: 100% AUTHENTIC</span>
+        </div>
+    </div>    
+ <div class="px-4 py-8 space-y-6">
+    <div class="glass p-6 rounded-[30px] border border-white/60 text-center relative overflow-hidden">
+        <div class="absolute -right-4 -top-4 w-16 h-16 bg-pink-500/10 blur-xl"></div>
+        <h3 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Love Meter Hari Ini</h3>
+        
+        <div class="relative inline-block mb-4">
+            <svg class="w-24 h-24 transform -rotate-90">
+                <circle cx="48" cy="48" r="40" stroke="currentColor" stroke-width="8" fill="transparent" class="text-pink-100" />
+                <circle id="loveCircle" cx="48" cy="48" r="40" stroke="currentColor" stroke-width="8" fill="transparent" stroke-dasharray="251.2" stroke-dashoffset="251.2" class="text-pink-500 transition-all duration-1000" />
+            </svg>
+            <div class="absolute inset-0 flex items-center justify-center font-black text-gray-800 text-lg">
+                <span id="lovePercent">0</span>%
+            </div>
+        </div>
+        
+        <p id="loveStatus" class="text-[10px] font-bold text-pink-400 italic">Klik tombol buat cek!</p>
+        <button onclick="cekCinta()" class="mt-4 bg-pink-500 text-white text-[10px] px-6 py-2 rounded-full font-bold uppercase tracking-tighter active:scale-90 transition-all">Cek Sekarang</button>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-[30px] shadow-xl text-center">
+        <div class="w-10 h-10 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4 rotate-12">
+            <i class="fas fa-dice text-gray-900"></i>
+        </div>
+        <h3 class="text-white font-bold text-sm mb-1">Random Challenge</h3>
+        <p class="text-gray-400 text-[9px] mb-4 uppercase tracking-[2px]">Lakuin ini bareng Agung!</p>
+        
+        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl mb-4">
+            <p id="challengeText" class="text-white text-xs italic font-medium">Klik tombol dadu...</p>
+        </div>
+
+        <button onclick="acakTantangan()" class="w-full py-3 bg-white text-gray-900 rounded-2xl text-[10px] font-black uppercase hover:bg-yellow-400 transition-all active:scale-95">
+            Acak Tantangan 🎲
+        </button>
+    </div>
+</div>
+<div class="px-4 pb-10">
+    <div class="bg-gradient-to-br from-pink-100 to-white p-6 rounded-[35px] border-2 border-white shadow-lg text-center relative overflow-hidden">
+        <div class="absolute -left-2 -bottom-2 opacity-10">
+            <i class="fas fa-quote-left text-6xl text-pink-500"></i>
+        </div>
+
+        <h3 class="text-[10px] font-black text-pink-400 uppercase tracking-[3px] mb-4">Tebak-tebakan Buat Kamu</h3>
+        
+        <div class="min-h-[60px] flex items-center justify-center">
+            <p id="tanyaGombal" class="text-gray-800 font-bold text-sm leading-relaxed">Klik tombol di bawah untuk mulai sayang...</p>
+        </div>
+
+        <div id="boxJawaban" class="hidden mt-4 p-3 bg-pink-500 rounded-2xl animate-bounce-short">
+            <p id="jawabGombal" class="text-white font-black text-xs italic"></p>
+        </div>
+
+        <div class="mt-6 flex gap-2">
+            <button onclick="acakGombal()" class="flex-1 bg-white border-2 border-pink-200 text-pink-500 py-3 rounded-2xl text-[10px] font-black uppercase active:scale-95 transition-all">
+                Tanya 🎲
+            </button>
+            <button id="btnJawab" onclick="revealJawaban()" class="hidden flex-1 bg-pink-500 text-white py-3 rounded-2xl text-[10px] font-black uppercase active:scale-95 transition-all shadow-md shadow-pink-200">
+                Jawaban? 🤔
+            </button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+<style>
+    @keyframes bounce-short {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    .animate-bounce-short { animation: bounce-short 0.5s ease-in-out; }
+</style>
+
+</div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- SETTING TANGGAL JADIAN (Ganti di sini) ---
+        const tanggalJadian = "2025-08-18"; 
+
+        // --- DAFTAR PESAN MANIS ---
+        const listPesan = [
+            "Kamu itu versi terbaik yang pernah aku temuin.",
+            "Semangat ya hari ini, dunia butuh senyum kamu!",
+            "Makasih ya udah pilih aku jadi teman cerita kamu.",
+            "Apapun yang kamu hadapi, aku selalu ada di belakangmu.",
+            "Cantiknya aku hari ini makan yang banyak ya ❤️",
+            "I love you more than words can say."
+        ];
+
+        function updateTimer() {
+            const start = new Date(tanggalJadian);
+            const now = new Date();
+            const diff = now - start;
+            const hari = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById('timer').innerText = hari + " Hari";
+        }
+
+        function tampilkanPesan() {
+            const random = Math.floor(Math.random() * listPesan.length);
+            document.getElementById('pesan-teks').innerText = `"${listPesan[random]}"`;
+        }
+
+        // Jalankan fungsi saat baru buka
+        updateTimer();
+        tampilkanPesan();
+        function tampilkanPeluk() {
+    const hugBox = document.getElementById('hug-container');
+    hugBox.classList.remove('hidden');
+
+    // Suara peluk (opsional, jika ingin ada bunyi 'puk-puk')
+    // const audio = new Audio('link_suara_lucu.mp3');
+    // audio.play();
+
+    // Klik di mana saja untuk menutup animasi pelukannya
+    hugBox.onclick = function() {
+        hugBox.classList.add('hidden');
+    };
+
+    // Otomatis hilang dalam 5 detik kalau nggak diklik
+    setTimeout(() => {
+        hugBox.classList.add('hidden');
+    }, 5000);
+}
+function bukaSurat(judul, isi) {
+    document.getElementById('judulSurat').innerText = "Open When " + judul;
+    document.getElementById('isiSurat').innerText = isi;
+    document.getElementById('modalSurat').classList.remove('hidden');
+}
+
+function tutupSurat() {
+    document.getElementById('modalSurat').classList.add('hidden');
+}
+// FUNGSI LOVE METER
+function cekCinta() {
+    const randomPercent = Math.floor(Math.random() * (100 - 90 + 1)) + 90; // Selalu 90-100% biar dia seneng
+    const circle = document.getElementById('loveCircle');
+    const display = document.getElementById('lovePercent');
+    const status = document.getElementById('loveStatus');
+    
+    // Animasi Lingkaran
+    const circumference = 2 * Math.PI * 40;
+    const offset = circumference - (randomPercent / 100) * circumference;
+    circle.style.strokeDashoffset = offset;
+    
+    // Animasi Angka
+    let start = 0;
+    const interval = setInterval(() => {
+        if (start >= randomPercent) clearInterval(interval);
+        display.innerText = start;
+        start++;
+    }, 20);
+
+    status.innerText = "Wah, sayangnya Agung ke Septi lagi kenceng banget!";
+}
+
+// FUNGSI RANDOM CHALLENGE
+const listTantangan = [
+    "Kirim Pap muka paling lucu sekarang! 😜",
+    "VN nyanyi reff lagu favorit kita 🎤",
+    "Coba gombalin Agung lewat chat 1x 😳",
+    "Screen shoot layar ini terus kasih tau Agung 📱",
+    "Janji bakal makan tepat waktu hari ini! 🍜",
+    "Kasih tau 1 hal yang paling kamu suka dari Agung 💖"
+];
+
+function acakTantangan() {
+    const textEl = document.getElementById('challengeText');
+    const randomIdx = Math.floor(Math.random() * listTantangan.length);
+    
+    textEl.style.opacity = 0;
+    setTimeout(() => {
+        textEl.innerText = listTantangan[randomIdx];
+        textEl.style.opacity = 1;
+    }, 300);
+}
+const daftarGombal = [
+    { t: "Kucing, kucing apa yang paling romantis?", j: "Kucing-ta kamu selamanya! ❤️" },
+    { t: "Minyak, minyak apa yang bikin mabuk?", j: "Minyak-saksikan senyummu setiap hari. 😍" },
+    { t: "Apa bedanya kamu sama modem?", j: "Modem terhubung ke internet, kamu terhubung ke hatiku. ✨" },
+    { t: "Kipas, kipas apa yang paling ditunggu?", j: "Kipas-tian kita ke pelaminan nanti. 💍" },
+    { t: "Cuka, cuka apa yang paling manis?", j: "Cuka-ma kamu! 😳" },
+    { t: "Bis, bis apa yang bikin aku pingsan?", j: "Bis-ikan sayang dari kamu. 🎤" },
+    { t: "Apa bedanya kamu sama jam dinding?", j: "Kalau jam dinding muter di tembok, kalau kamu muter di pikiranku terus. 🧠💖" }
+];
+
+function acakGombal() {
+    const randomIdx = Math.floor(Math.random() * daftarGombal.length);
+    document.getElementById('tanyaGombal').innerText = daftarGombal[randomIdx].t;
+    document.getElementById('jawabGombal').innerText = daftarGombal[randomIdx].j;
+    
+    // Reset Tampilan
+    document.getElementById('boxJawaban').classList.add('hidden');
+    document.getElementById('btnJawab').classList.remove('hidden');
+}
+
+function revealJawaban() {
+    document.getElementById('boxJawaban').classList.remove('hidden');
+    document.getElementById('btnJawab').classList.add('hidden');
+}
+
+
+    </script>
+</body>
+</html>
